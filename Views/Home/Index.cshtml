@@ -1,0 +1,50 @@
+﻿@model CLDV6212POE.Models.CustomerProfile
+<div class="container">
+    <h2>Customer Profile Management</h2>
+    <form asp-action="AddCustomerProfile" method="post">
+        <div class="mb-3">
+            <label for="FirstName" class="form-label">First Name</label>
+            <input type="text" name="FirstName" class="form-control" placeholder="Enter first name" />
+        </div>
+        <div class="mb-3">
+            <label for="LastName" class="form-label">Last Name</label>
+            <input type="text" name="LastName" class="form-control" placeholder="Enter last name" />
+        </div>
+        <div class="mb-3">
+            <label for="Email" class="form-label">Email</label>
+            <input type="email" name="Email" class="form-control" placeholder="Enter email" />
+        </div>
+        <div class="mb-3">
+            <label for="PhoneNumber" class="form-label">Phone Number</label>
+            <input type="text" name="PhoneNumber" class="form-control" placeholder="Enter phone number" />
+        </div>
+        <button type="submit" class="btn btn-primary">Add Profile</button>
+    </form>
+
+    <h2>Upload Image</h2>
+    <form asp-action="UploadImage" method="post" enctype="multipart/form-data">
+        <div class="mb-3">
+            <label for="file" class="form-label">Choose Image File</label>
+            <input type="file" name="file" class="form-control" />
+        </div>
+        <button type="submit" class="btn btn-primary">Upload Image</button>
+    </form>
+
+    <h2>Process Order</h2>
+    <form asp-action="ProcessOrder" method="post">
+        <div class="mb-3">
+            <label for="orderId" class="form-label">Order ID</label>
+            <input type="text" name="orderId" class="form-control" placeholder="Enter order ID" />
+        </div>
+        <button type="submit" class="btn btn-primary">Process Order</button>
+    </form>
+
+    <h2>Upload Contract</h2>
+    <form asp-action="UploadContract" method="post" enctype="multipart/form-data">
+        <div class="mb-3">
+            <label for="file" class="form-label">Choose Contract File</label>
+            <input type="file" name="file" class="form-control" />
+        </div>
+        <button type="submit" class="btn btn-primary">Upload Contract</button>
+    </form>
+</div>
